@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5f22c53c3b30871259d77cbb"},"firstName":"Bhagya","lastName":"Vijayan","email":"admin@plantaseed.com","password":"admin123","__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5f22c55d3b30871259d77cbc"},"firstName":"Rajeesh","lastName":"Kumar","email":"user@123.com","password":"user123","__v":{"$numberInt":"0"}}
