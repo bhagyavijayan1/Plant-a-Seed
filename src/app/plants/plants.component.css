@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,900,300,300);
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+
+
+.bd-example{
+  margin-top: 5%;
+
+}
+
+.carousel-item {
+ height: 500px !important;
+}
+
+/* .d-block{
+width:75% !important;
+height:25% !important;
+} */
+
+
+/* card section */
+
+h4
+{
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+
+#graph {
+  float: right;
+  width: 400px;
+  height: 284px;
+  margin: 0 5px 0 0;
+}
+
+textarea {
+  width: 50%;
+  height:60%;
+  border:2px solid green;
+}
+
+
+/* Graph */
+
+.how-section1{
+  margin-top:-15%;
+  padding: 10%;
+  padding-top: 5%;
+}
+.how-section1 h4{
+  color: #ffa500;
+  font-weight: bold;
+  font-size: 30px;
+}
+.how-section1 .subheading{
+  color: #3931af;
+  font-size: 20px;
+}
+.how-section1 .row
+{
+  margin-top: 10%;
+}
+.how-img
+{
+  text-align: left;
+
+}
+.how-img img{
+  width: 40%;
+  margin-left: -15%;
+}
+
+.text-muted{
+  color: black !important;
+}
+
+/* Image */
+
+/* .bord{
+  border:2px solid red;
+  border-radius:16px;
+  overflow: hidden;
+} */
+
+.bord img{
+  border-radius:16px;
+}
+
+.bg{
+  background-color: white;
+  border-radius: 16px;
+
+}
+.footimage {
+  border-radius: 16px;
+}
+
+.fas{
+  color:white;
+}
+p{
+  font-family:'Open Sans',serif;
+
+}
+
+h2{
+
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.subdetail{
+font-size: 20px;
+font-family: 'Ubuntu', sans-serif;
+
+}
