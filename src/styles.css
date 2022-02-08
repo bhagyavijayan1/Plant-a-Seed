@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,900,300,300);
+
+
+/* .page-footer{
+  margin-top:600px;
+  color: white;
+  background-color: rgb(76, 172, 48);
+  margin-bottom:0;
+} */
+
+
+.selector {
+  background-image: url("./assets/images/bg3.jpg");
+  background-repeat: no-repeat;
+  background-color: black;
+}
+.bg-img{
+  background-color: black;
+}
+
