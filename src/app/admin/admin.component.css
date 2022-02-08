@@ -1,0 +1,51 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,900,300,300);
+
+
+body{
+  background-color: white;
+}
+.card{
+  width:75%;
+}
+.card-text{
+  height:60px;
+}
+.card-img-top{
+  height:250px;
+}
+/* .btn{
+  width:100%;
+} */
+
+.navbar
+{
+  background-color: rgb(222,222,222);
+  font-family:'Open Sans',serif;
+  font-weight: bold;
+
+}
+.nav-link{
+  color:black !important;
+
+}
+.card-text{
+  font-size:smaller;
+}
+.card-title{
+  font-weight: bold;
+}
+
+.active-pink input.form-control[type=text] {
+  border-bottom: 1px solid #f48fb1;
+  box-shadow: 0 1px 0 0 #f48fb1;
+}
+.btn{
+  color:white
+}
+
+/* .fa{
+  color:rgb(103,136,53);
+} */
+/* span{
+  color: Black;
+} */

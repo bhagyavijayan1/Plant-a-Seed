@@ -1,0 +1,76 @@
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color" >
+
+  <!-- Navbar brand -->
+  <a href="#"><img src="../assets/images/plantaseed90.png"alt="image" ></a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/admin" routerLinkActive="active">EDIT</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/donate" routerLinkActive="active">DONATE</a>
+      </li>
+       </ul>
+       <ul class=" nav navbar-nav navbar-right">
+        <a class ="nav-link" style="cursor:pointer"  (click)="logoutUser()">LOGOUT</a>
+
+
+      </ul>
+
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+
+
+
+
+
+
+
+
+<!-- card -->
+<div class ="form-group" style="margin-top: 5%;">
+  <input type="text" class="form-control" placeholder="search"
+        style="width:300px" [(ngModel)]="searchTerm" />
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="container">
+	<div class="row">
+	    <div class="col-md-4 pl-0" *ngFor=' let plant of filteredPlants' >
+    		<div class="card mb">
+              <img class="card-img-top" [src]="plant.imageUrl" alt="Card image cap">
+              <div class="card-body mb">
+                <i class="fa fa-leaf" aria-hidden="true" style="color:rgb(103,136,53);"><span class="ml-1">{{plant.plantName}}</span></i>
+                <i class="fa fa-map-marker" aria-hidden="true" style="float: right; color: rgb(172, 8, 8);"><span class="ml-1" style="color:rgb(103,136,53);">{{plant.location}}</span></i>
+                <p class="card-text" >{{plant.description}}</p>
+                <div >
+                  <button class="btn btn-default" [routerLink]="['/update',plant._id]" style="background-color: rgb(103,136,53);" ><i class="fa fa-refresh" aria-hidden="true"></i> Update</button>
+                  <button class="btn btn-default" (click)="deletePlant(plant._id)" style="background-color:rgb(255, 136, 0); float: right;"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                </div>
+              </div>
+            </div>
+            <br>
+        </div>
+
+	</div>
+</div>
+	</div>
+</div>
+
+
+<!-- Card -->
