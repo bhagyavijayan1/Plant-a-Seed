@@ -1,0 +1,32 @@
+<p style="color: white; text-align: center;"> <i class="fa fa-pagelines fa-2x" aria-hidden="true"></i>
+  Join the Family,Start Donating <button id = "donateh" class="btn" style="background-color: rgb(103, 136, 53);" routerLink="/donate"> Donate </button></p>
+<div class ="form-group" style="margin-top: 5%; margin-left: 36.5%;">
+  <input type="text" class="form-control" placeholder="Search by plantname/location"
+        style="width:300px" [(ngModel)]="searchTerm" />
+</div>
+<div class="container" >
+	<div class="row">
+		<div class="container">
+	<div class="row">
+	    <div class="col-md-4 pl-0" *ngFor=' let plant of filteredPlants' >
+    		<div class="card mb" style="margin-left: 15%;">
+              <img class="card-img-top" [src]="plant.imageUrl" alt="Card image cap">
+              <div class="card-body mb">
+                <i class="fa fa-leaf" aria-hidden="true" style="color:rgb(103,136,53);"><span class="ml-1">{{plant.plantName}}</span></i>
+                <i class="fa fa-map-marker" aria-hidden="true" style="float: right; color: rgb(172, 8, 8);"><span class="ml-1" style="color:rgb(103,136,53);">{{plant.location}}</span></i>
+                <p class="card-text" >{{plant.description}}</p>
+                <div class="card-footer">
+                <button type="button" routerLink="/adopt" routerLinkActive="active"class="btn btn-default mb">Adopt</button>
+              </div>
+              </div>
+            </div>
+            <br>
+        </div>
+
+  </div>
+</div>
+	</div>
+</div>
+
+
+<!-- Card -->

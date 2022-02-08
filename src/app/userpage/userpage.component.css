@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+
+body{
+  background-color: white;
+}
+.card{
+  width:75%;
+}
+.card-text{
+  height:60px;
+}
+.card-img-top{
+  height:250px;
+}
+.btn{
+  width:100%;
+ background-color: rgb(103,136,53);
+ color:white;
+}
+/* .jumbotron {
+  background-image: url("https://rb.gy/qzfi08");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ } */
+
+ .card-text{
+   font-size:smaller;
+ }
+ .card-title{
+   font-weight: bold;
+ }
+ .card-footer{
+   height:80%;
+ }
+
+p{
+  font-family: 'Ubuntu Condensed', sans-serif;
+font-size: x-large;
+}
+
+#donateh{
+  width:10%;
+
+}
