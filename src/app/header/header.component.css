@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,900,300,300);
+
+
+.nav-link{
+  color:black !important;
+  font-family:'Open Sans',serif;
+  font-weight: bold;
+
+}
+
+ul li a:hover{
+  background-color:rgb(123, 194, 123);
+}
+

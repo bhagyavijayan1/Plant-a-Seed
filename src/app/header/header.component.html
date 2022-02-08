@@ -1,0 +1,41 @@
+
+<nav *ngIf="nav.visible" class="navbar navbar-expand-lg navbar-dark bg-default"  style="background-color: rgb(222, 222, 222);" >
+  <a href="#"><img src="../assets/images/logo1.png"alt="image" style="width:25%; height:5%;"></a>
+  <!-- <a class="navbar-brand" href="#">PlantASeed</a> -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: -15%;">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="/portfolio" routerLinkActive="active">PORTFOLIO</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="/about" routerLinkActive="active">WHO WE ARE</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="/contact" routerLinkActive="active">CONNECT</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="/user" routerLinkActive="active">ADOPT</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="/donate" routerLinkActive="active">DONATE</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="/download" routerLinkActive="active">DOWNLOAD</a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup" >
+    <div class="navbar-nav align-items-end">
+    <ul class=" nav navbar-nav navbar-right">
+        <a class="nav-link" routerLink="/signup" *ngIf="!_auth.loggedIn()" routerLinkActive="active"  >REGISTER</a>
+        <a class="nav-link" routerLink="/login" *ngIf="!_auth.loggedIn()" routerLinkActive="active" >LOGIN</a>
+        <a class ="nav-link" style="cursor:pointer" *ngIf="_auth.loggedIn()"  (click)="logoutUser()" >LOGOUT</a>
+ </ul>
+  </div>
+  </div>
+</nav>
