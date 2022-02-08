@@ -1,0 +1,88 @@
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color" >
+
+  <!-- Navbar brand -->
+  <a href="#"><img src="../assets/images/logo1.png"alt="image" style="width:25%; height:5%;"></a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+
+    <!-- Links -->
+    <div class="navbar-nav mr-auto" style="margin-left: -20%;">
+      <li class="nav-item active">
+        <a class="nav-link"  style="cursor:pointer" (click)="home()" routerLinkActive="active">HOME</a>
+      </li>
+    </div>
+  </nav>
+
+<!-- Donate Form -->
+
+<div class="jumbotron">
+  <form class="col-md-offset-3 col-md-6" [formGroup]='form' #donatePlant="ngForm"   (ngSubmit)="Donate()">
+    <!-- Plant Name -->
+    <div class="form-group">
+        <label for="p_name" class="control-label">Name of your Plant</label>
+        <input type="text" class="form-control"  formControlName='plantName' >
+      </div>
+   <!-- Category -->
+      <div class="form-group">
+        <label for="p_cat">
+            Category</label>
+        <select  class="form-control" formControlName='category'>
+            <option value="na" selected="">Choose One:</option>
+            <option value="Flowering Plant">Flowering Plant</option>
+            <option value="Indoor Plant">Indoor Plant</option>
+            <option value="Creeper">Creeper</option>
+            <option value="Seed">Seed</option>
+            <option value="Herb">Herb</option>
+            <option value="Tree">Tree</option>
+
+        </select>
+    </div>
+    <!-- Description -->
+    <div class="form-group">
+        <label for="p_desc" class="control-label">Description</label>
+        <input type="text" class="form-control"  formControlName='description' >
+      </div>
+    <!-- Location -->
+    <div class="form-group">
+      <label for="p_loc">
+          Location</label>
+      <select  class="form-control" formControlName='location'>
+          <option value="na" selected="">Choose One:</option>
+          <option value="Trivandrum">Trivandrum</option>
+          <option value="Kollam">Kollam</option>
+          <option value="Alapuzha">Alapuzha</option>
+          <option value="Pathanamthitta">Pathanamthitta</option>
+          <option value="Kottayam">Kottayam</option>
+          <option value="Ernakulam">Ernakulam</option>
+
+      </select>
+  </div>
+<!-- Availability -->
+    <!-- <div class="form-group">
+      <label for="p_avl">
+          Availability</label>
+      <select  class="form-control" formControlName='availability'>
+          <option value="na" selected="">Choose One:</option>
+          <option value="yes">Yes</option>
+          <option value="No">No</option>
+      </select>
+  </div> -->
+
+
+    <div class="form-group">
+      <!-- <img [src]="imageUrl" > -->
+      <label for="p_img" class="control-label">Image( only png,jpeg,jpg)</label>
+      <input type="file"  name="p_img" #Image accept="image/*" multiple (change)="selectImage($event)" required /><br>
+  </div>
+  <div>
+  <button type="submit" [disabled]="donatePlant.form.invalid"class="btn btn-success">Donate</button>
+</div>
+</form>
+  </div>

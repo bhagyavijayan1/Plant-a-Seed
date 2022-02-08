@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,900,300,300);
+
+
+.jumbotron {
+  padding-top:1%;
+  /* padding-bottom: 0; */
+  position: relative;
+  margin-left: 45%;
+  width: 50%;
+  height: 100%;
+  margin-top:2%;
+  padding-left:0%;
+  border-radius: 8%;
+  background: #fff url("/assets/images/donate3.jpg") center center;
+  background-size: cover;
+  overflow: hidden;
+  font-family:'Open Sans',serif;
+  font-weight: bold;
+
+}
+
+
+.navbar
+{
+  background-color: rgb(222,222,222);
+}
+.nav-link{
+  color:black !important;
+
+}
