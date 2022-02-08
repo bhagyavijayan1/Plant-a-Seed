@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,900,300,300);
+
+
+.jumbotron {
+  position: relative;
+  width: 60%;
+  height: 60%;
+  margin-top:5%;
+  /* background: #fff url("https://bit.ly/3hF5z3f") center center; */
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+.navbar
+{
+  background-color: rgb(222,222,222);
+  font-family:'Open Sans',serif;
+  font-weight: bold;
+
+}
+.nav-link{
+  color:black !important;
+
+}

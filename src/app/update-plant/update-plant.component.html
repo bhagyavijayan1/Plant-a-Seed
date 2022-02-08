@@ -1,0 +1,110 @@
+
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color" >
+
+  <!-- Navbar brand -->
+  <a href="#"><img src="../assets/images/plantaseed90.png"alt="image" ></a>
+
+  <!-- Collapse button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="basicExampleNav">
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/admin" routerLinkActive="active">EDIT</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/donate" routerLinkActive="active">DONATE</a>
+      </li>
+       </ul>
+       <ul class=" nav navbar-nav navbar-right">
+        <a class ="nav-link" style="cursor:pointer" routerLink="/">LOGOUT</a>
+
+
+      </ul>
+
+  </div>
+  <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+
+
+<!-- Update  -->
+<div class="jumbotron">
+<form class="col-md-offset-3 col-md-6" [formGroup]='editForm' #editPlant="ngForm"   (ngSubmit)="update()">
+<!-- Plant Name -->
+  <div class="form-group">
+      <label for="p_name" class="control-label">Plant Name</label><br>
+      <input type="text" class="form-control" formControlName="plantName" [(ngModel)]="plantItem.plantName" required />
+    </div>
+  <!-- Category -->
+   <div class="form-group">
+      <label for="p_cat">
+          Category</label>
+      <select  class="form-control" formControlName='category' [(ngModel)]="plantItem.category" required>
+        <option value="na" selected="">Choose One:</option>
+        <option value="Flowering Plant">Flowering Plant</option>
+        <option value="Indoor Plant">Indoor Plant</option>
+        <option value="Creeper">Creeper</option>
+        <option value="Seed">Seed</option>
+        <option value="Herb">Herb</option>
+        <option value="Tree">Tree</option>
+
+      </select>
+  </div>
+<!-- Description -->
+  <div class="form-group">
+      <label for="p_desc" class="control-label">Description</label><br>
+      <input type="text" class="form-control" formControlName="description" [(ngModel)]="plantItem.description"  required />
+  </div>
+<!-- Location -->
+<div class="form-group">
+  <label for="p_loc">
+      Location</label>
+  <select  class="form-control" formControlName='location' [(ngModel)]="plantItem.location"  required>
+      <option value="na" selected="">Choose One:</option>
+      <option value="Trivandrum">Trivandrum</option>
+      <option value="Kollam">Kollam</option>
+      <option value="Alapuzha">Alapuzha</option>
+      <option value="Pathanamthitta">Pathanamthitta</option>
+      <option value="Kottayam">Kottayam</option>
+      <option value="Ernakulam">Ernakulam</option>
+
+  </select>
+</div>
+  <!-- <div class="form-group">
+    <label for="p_avl" class="control-label">Availability</label><br>
+    <input type="text" class="form-control" formControlName="availability" [(ngModel)]="plantItem.availability" required />
+</div> -->
+<!-- Availability -->
+<div class="form-group">
+  <label for="p_avl">
+      Availability</label>
+  <select  class="form-control" formControlName='availability' [(ngModel)]="plantItem.availability" required>
+      <option value="na" selected="">Choose One:</option>
+      <option value="yes">Yes</option>
+      <option value="No">No</option>
+  </select>
+</div>
+<div class="imgPrev" >
+  <img [src]="!imagePreview ? plantItem.imageUrl : imagePreview " alt="Uploaded Image" class="img-fluid img-thumbnail rounded">
+</div>
+
+  <div class="form-group">
+    <label for="p_img" class="control-label">ImageUrl</label>
+    <input type="file" class="form-control"  #Image accept="image/*"  (change)="selectImage($event)" required />
+    <!-- <input type="text" name="p_img"  #fileUpload id="fileUpload" [ngModel]="plantItem?.imageUrl" (ngModelChange)="plantItem.imageUrl = $event" required /> -->
+
+</div>
+
+  <button type="submit" [disabled]="editPlant.form.invalid"class="btn btn-success">Update</button>
+</form>
+</div>
+
