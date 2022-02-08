@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,900,300,300);
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+body {
+    color: #cecece;
+  background: #222;
+  overflow: hidden;
+
+}
+
+.item-1,
+.item-2,
+.item-3 {
+  /* font-family:'Open Sans',serif; */
+  font-family: 'Ubuntu Condensed', sans-serif;
+	position: absolute;
+  display: block;
+	/* top: 2em; */
+  margin-top:15%;
+  margin-left:50%;
+  /* width: 60%; */
+
+  font-size: 2em;
+
+	animation-duration: 30s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+}
+
+.item-1{
+	animation-name: anim-1;
+}
+
+.item-2{
+	animation-name: anim-2;
+}
+
+.item-3{
+	animation-name: anim-3;
+}
+
+@keyframes anim-1 {
+	0%, 8.3% { down: 40%; opacity: 0; }
+  8.3%,25% { down: 25%; opacity: 1; }
+  33.33%, 100% { down: 50%; opacity: 0; }
+}
+
+@keyframes anim-2 {
+	0%, 33.33% { down: 40%; opacity: 0; }
+  41.63%, 58.29% { down: 25%; opacity: 1; }
+  66.66%, 100% { down: 50%; opacity: 0; }
+}
+
+@keyframes anim-3 {
+	0%, 66.66% { down: 40%; opacity: 0; }
+  74.96%, 91.62% { down: 25%; opacity: 1; }
+  100% { up: 50%; down: 0; }
+}
+
+.fa{
+  color:rgb(103,136,53);
+}
+p{
+  color:white;
+}
